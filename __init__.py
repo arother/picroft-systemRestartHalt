@@ -48,13 +48,13 @@ class systemSkill(MycroftSkill):
 
     def handle_shutdown_intent(self, message):
         self.speak_dialog("shuttingDown")
-        time.sleep(30)
-        os.system("systemctl poweroff")
+        time.sleep(10)
+        os.system("sudo systemctl poweroff")
 
     def handle_restart_intent(self, message):
         self.speak_dialog("restart")
-        time.sleep(30)
-        os.system("systemctl reboot")
+        time.sleep(10)
+        os.system("sudo systemctl reboot")
 
     def stop(self):
         pass
